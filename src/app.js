@@ -2,7 +2,6 @@ import express from "express"
 import cors from "cors"
 import db from "./database/db.js"
 import personsRoutes from "./routes/routes.js"
-import { PORT } from "./config.js"
 
 const app = express()
 
@@ -22,6 +21,6 @@ app.use("/persons", personsRoutes)
 //   res.send("Hello World!")
 // })
 
-app.listen(PORT, () => {
-  console.log(`🚀 Server listening on port ${PORT}`)
+app.listen(5000, () => {
+  console.log(`🚀 Server listening on port 5000`)
 })
