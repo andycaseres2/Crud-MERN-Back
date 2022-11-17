@@ -1,11 +1,15 @@
 {
   "name": "back-crud-mern",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon -r esm src/app.js",
-    "start": "node src/app.js"
+    "start": "node src/app.js",
+    "heroku-postbuild": "npm run build"
+  },
+  "engines": {
+    "npm": "5.6.0",
+    "node": "8.10.0"
   },
   "keywords": [],
   "author": "",
@@ -19,5 +23,14 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andycaseres2/Crud-MERN-Back.git"
+  },
+  "bugs": {
+    "url": "https://github.com/andycaseres2/Crud-MERN-Back/issues"
+  },
+  "homepage": "https://github.com/andycaseres2/Crud-MERN-Back#readme",
+  "description": ""
 }
