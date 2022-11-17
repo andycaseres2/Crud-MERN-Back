@@ -1,7 +1,7 @@
 import { Sequelize } from "sequelize"
 
 const db = new Sequelize("crud-mern", "root", "", {
-  host: process.env.URL,
+  host: "localhost",
   dialect: "mysql",
 })
 

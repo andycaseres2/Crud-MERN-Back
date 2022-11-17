@@ -21,6 +21,15 @@ app.use("/persons", personsRoutes)
 //   res.send("Hello World!")
 // })
 
-app.listen(process.env.PORT, () => {
+const mysql = require("mysql")
+const connection = mysql.createConnection({
+  host: process.env.MYSQLHOST,
+  user: process.env.MYSQLUSER,
+  password: process.env.MYSQLPASSWORD,
+  database: process.env.MYSQLDATABASE,
+})
+connection.connect()
+
+app.listen(5000, () => {
   console.log(`🚀 Server listening on port 5000 🚀`)
 })
