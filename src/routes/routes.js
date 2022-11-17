@@ -5,10 +5,11 @@ import {
   getPersons,
   updatePerson,
   deletePerson,
+  prueba,
 } from "../controllers/PersonaController.js"
 
 const router = express.Router()
-
+router.get("/prueba", prueba)
 router.get("/", getPersons)
 router.get("/:id", getPerson)
 router.post("/", createPerson)

@@ -1,5 +1,9 @@
 import PersonaModel from "../models/PersonaModel.js"
 
+export const prueba = async (_, res) => {
+  res.send("Hola prueba")
+}
+
 export const getPersons = async (_, res) => {
   try {
     const persons = await PersonaModel.findAll()
