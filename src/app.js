@@ -4,7 +4,7 @@ import db from "./database/db.js"
 import personsRoutes from "./routes/routes.js"
 
 const app = express()
-
+const PORT = process.env.PORT || 5000
 app.use(cors())
 app.use(express.json())
 app.use("/persons", personsRoutes)
@@ -17,19 +17,10 @@ app.use("/persons", personsRoutes)
   }
 }
 
-// app.get("/ping", (req, res) => {
-//   res.send("Hello World!")
-// })
-
-const mysql = require("mysql")
-const connection = mysql.createConnection({
-  host: process.env.MYSQLHOST,
-  user: process.env.MYSQLUSER,
-  password: process.env.MYSQLPASSWORD,
-  database: process.env.MYSQLDATABASE,
+app.get("/ping", (req, res) => {
+  res.send("Hello World!")
 })
-connection.connect()
 
-app.listen(5000, () => {
+app.listen(PORT, () => {
   console.log(`🚀 Server listening on port 5000 🚀`)
 })
